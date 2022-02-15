@@ -5,20 +5,22 @@
 
     <StackLayout>
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            <Label Text="Game" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+        <Label Text="Any Message" FontSize="Title" Padding="30,10,30,10"/>
+        <StackLayout
+            HorizontalOptions="Center"
+            Orientation="Horizontal">
+            <Frame CornerRadius="10" Background="red" Margin="20">
+                <Label Text="2" WidthRequest="40"
+                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                       HeightRequest="40"/>
+            </Frame>
+          
+        </StackLayout>
+        <Button Text="Roll"/>
+        <Label Text="Turn Result: 100" FontSize="Title" Padding="30,10,30,10"/>
+        <Label Text="Overall Result: 50" FontSize="Title" Padding="30,10,30,10"/>
     </StackLayout>
 
 </ContentPage>
