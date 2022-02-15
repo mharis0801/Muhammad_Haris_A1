@@ -7,21 +7,26 @@
         <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
             <Label Text="Game" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
         </Frame>
-        <Label Text="Any Message" FontSize="Title" Padding="30,10,30,10"/>
+        <Label x:Name="startMsg" Text="Click Roll to begin" FontSize="Title" Padding="30,10,30,10"/>
         <StackLayout
             HorizontalOptions="Center"
             Orientation="Horizontal">
             <Frame CornerRadius="10" Background="red" Margin="20">
-                <Label Text="2" WidthRequest="40"
+                <Label x:Name="Die1Veiw" Text="" WidthRequest="40"
                        HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
-                       HeightRequest="40"/>
+                       HeightRequest="40" TextColor="White" FontSize="Medium"/>
+            </Frame>
+            <Frame CornerRadius="10" Background="red" Margin="20">
+                <Label x:Name="Die2Veiw" Text="" WidthRequest="40"
+                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+                       HeightRequest="40" TextColor="White" FontSize="Medium"/>
             </Frame>
           
         </StackLayout>
-        <Button Text="Roll"/>
-        <Label Text="Turn Result: 100" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Overall Result: 50" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Muhammad Hairs"/>
+        <Button Text="Roll" Clicked="Button_Clicked" CornerRadius="100" BackgroundColor="Blue" TextColor="White"/>
+        <Label x:Name="turnScore" Text="Turn score= " FontSize="Title" Padding="30,10,30,10"/>
+        <Label x:Name="overallScore" Text="Overall Score= " FontSize="Title" Padding="30,10,30,10"/>
+        <Label Text="Muhammad Hairs" HorizontalTextAlignment="Center"/>
     </StackLayout>
 
 </ContentPage>
