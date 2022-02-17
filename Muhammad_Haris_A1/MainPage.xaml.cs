@@ -17,6 +17,7 @@ namespace Muhammad_Haris_A1
         {
             InitializeComponent();
             StartGame();
+            RestartGame();
         }
 
         private void StartGame()
@@ -34,7 +35,22 @@ namespace Muhammad_Haris_A1
             Die2Veiw.Text = $"{_game.Die2}";
             turnScore.Text = $"Turn Score = {_game.TurnScore}";
             overallScore.Text = $"Overall Score = {_game.OverallScore}";
+
+            if (_game.PlayCount == 10)
+            {
+                startMsg.Text = $"Game is over! Your overall score is {_game.OverallScore} points";
+                _game.Restart();
+                
+            }
+            else
+                return;
+
+        }
+
+        public void RestartGame()
+        {
             
+
         }
     }
 }

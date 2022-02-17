@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Muhammad_Haris_A1
 {
     public class Game
@@ -7,7 +9,9 @@ namespace Muhammad_Haris_A1
         public int Die2 { get; private set; }
         public int TurnScore { get; private set; }
         public int OverallScore { get; private set; }
-        public int PlayCount { get; private set; } 
+        public int PlayCount { get; private set; }
+        List<int> Scores = new List<int>();
+        
 
 
         public Game()
@@ -37,9 +41,26 @@ namespace Muhammad_Haris_A1
             else
                 TurnScore = 0;
 
+           
+
             OverallScore = TurnScore + OverallScore;
+            Scores.Add(OverallScore);
+            
+
             
             
+        }
+        public void Restart()
+        {
+            if (PlayCount == 10)
+            {
+
+                
+                OverallScore = 0;
+                PlayCount = 0;
+            }
+            else
+                return;
         }
     }
 }
