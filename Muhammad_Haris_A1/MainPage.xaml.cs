@@ -17,7 +17,7 @@ namespace Muhammad_Haris_A1
         {
             InitializeComponent();
             StartGame();
-            RestartGame();
+            
         }
 
         private void StartGame()
@@ -47,10 +47,6 @@ namespace Muhammad_Haris_A1
 
         }
 
-        public void RestartGame()
-        {
-            
-
-        }
+        
     }
 }
